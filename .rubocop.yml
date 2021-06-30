@@ -8,3 +8,7 @@ require:
 # https://github.com/rubocop-hq/rubocop/issues/691
 Documentation:
   Enabled: false
+
+#We prefer to use more than one assert per test
+RSpec/MultipleExpectations:
+  Enabled: false
