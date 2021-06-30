@@ -1,10 +1,22 @@
-<div class="transaction">
-  <%= form_with url: "/transactions" do |f| %>
-    <hr class="mt-2">
-    <%= f.file_field :transactions %>
-    <hr>
-    <div class="row">
-      <%= f.submit "Ingresar" %>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body class="bg-light">
+  <%= render "navigation_bar"%>
+  <div class="container">
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-primary">
+      <%= msg %>
     </div>
-  <% end  %>
-</div>
+  <% end %>
+    <%= form_with url: "/transactions" do |f| %>
+      <hr class="mt-2">
+      <%= f.file_field :transactions %>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <%= f.submit "Ingresar", class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+      </div>
+    <% end  %>
+  </div>
+</body>
