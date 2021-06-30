@@ -1,3 +1,10 @@
 <div class="transaction">
-  Transactions view
+  <%= form_with url: "/transactions" do |f| %>
+    <hr class="mt-2">
+    <%= f.file_field :transactions %>
+    <hr>
+    <div class="row">
+      <%= f.submit "Ingresar" %>
+    </div>
+  <% end  %>
 </div>
